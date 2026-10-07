@@ -1,0 +1,6 @@
+{
+  "name": "Katalog & Undangan Pernikahan Mewah Emas",
+  "description": "Katalog dan undangan pernikahan digital eksklusif dengan opening mawar emas megah berputar, kelopak bunga berguguran, galeri pasangan, dan ornamen mewah elegan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

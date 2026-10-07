@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-sans-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFF6D6 0%, #F4D06F 25%, #D4AF37 50%, #996515 80%, #F9E79F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gold-shimmer {
+    background: linear-gradient(90deg, #D4AF37 0%, #FFF4D0 40%, #AA771C 60%, #D4AF37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmer 5s linear infinite;
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #AA771C 85%, #E5C158 100%);
+  }
+
+  .bg-gold-subtle {
+    background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, rgba(11, 10, 14, 0) 70%);
+  }
+
+  .border-gold-glow {
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.12), inset 0 0 15px rgba(212, 175, 55, 0.05);
+  }
+
+  .border-gold-card {
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(212, 175, 55, 0.1);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseSlowSpin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-slow-spin {
+  animation: slowSpin 35s linear infinite;
+}
+
+.animate-reverse-spin {
+  animation: reverseSlowSpin 45s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0a0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a2e1d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
